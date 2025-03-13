@@ -1,0 +1,12 @@
+export const progressBar = document.querySelector('.progress-bar') as HTMLDivElement;
+export const progress = document.querySelector('.progress') as HTMLDivElement;
+export const startUI = document.getElementById("start-ui");
+export const gameUIHeader = document.querySelector('#game-ui-header') as HTMLElement;
+export const currentPlayerElement = document.getElementById('current-player') as HTMLSpanElement;
+export const currentPlayerText = document.getElementById('current-player-text') as HTMLParagraphElement;
+export const bombText = document.getElementById('bomb-text') as HTMLParagraphElement;
+export const gameInstructions = document.getElementById('game-instructions') as HTMLElement;
+export const winnerText = document.getElementById('winner-text') as HTMLHeadingElement;
+export const timerText = document.getElementById('timer-text') as HTMLParagraphElement;
+export const gameElements = document.querySelectorAll('.game-element') as NodeListOf<HTMLElement>;
+export const introElements = document.querySelectorAll('.intro-element') as NodeListOf<HTMLElement>;

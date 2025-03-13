@@ -1,0 +1,195 @@
+.loading-screen{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    background: #ff1ead;
+    z-index: 101;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 4s ease-out;
+    pointer-events: none;
+
+}
+
+.loading-screen p{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #450055;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+    
+}
+.loading-screen--hidden{
+    opacity: 0;
+}
+.s3gon:nth-child(n + 2):nth-child(-n + 4) {
+    --ridx: 2
+}
+
+.s3gon:nth-child(2),
+.s3gon:nth-child(6),
+.s3gon:nth-child(12),
+.s3gon:nth-child(20),
+.s3gon:nth-child(30),
+.s3gon:nth-child(42) {
+    --cidx: 6
+}
+
+.s3gon:nth-child(4),
+.s3gon:nth-child(8),
+.s3gon:nth-child(14),
+.s3gon:nth-child(22),
+.s3gon:nth-child(32),
+.s3gon:nth-child(44) {
+    --cidx: 8
+}
+
+.s3gon:nth-child(n + 5):nth-child(-n + 9) {
+    --ridx: 3
+}
+
+.s3gon:nth-child(5),
+.s3gon:nth-child(11),
+.s3gon:nth-child(19),
+.s3gon:nth-child(29),
+.s3gon:nth-child(41) {
+    --cidx: 5
+}
+
+.s3gon:nth-child(9),
+.s3gon:nth-child(15),
+.s3gon:nth-child(23),
+.s3gon:nth-child(33),
+.s3gon:nth-child(45) {
+    --cidx: 9
+}
+
+.s3gon:nth-child(n + 10):nth-child(-n + 16) {
+    --ridx: 4
+}
+
+.s3gon:nth-child(10),
+.s3gon:nth-child(18),
+.s3gon:nth-child(28),
+.s3gon:nth-child(40) {
+    --cidx: 4
+}
+
+.s3gon:nth-child(16),
+.s3gon:nth-child(24),
+.s3gon:nth-child(34),
+.s3gon:nth-child(46) {
+    --cidx: 10
+}
+
+.s3gon:nth-child(n + 17):nth-child(-n + 25) {
+    --ridx: 5
+}
+
+.s3gon:nth-child(17),
+.s3gon:nth-child(27),
+.s3gon:nth-child(39) {
+    --cidx: 3
+}
+
+.s3gon:nth-child(25),
+.s3gon:nth-child(35),
+.s3gon:nth-child(47) {
+    --cidx: 11
+}
+
+.s3gon:nth-child(n + 26):nth-child(-n + 36) {
+    --ridx: 6
+}
+
+.s3gon:nth-child(26),
+.s3gon:nth-child(38) {
+    --cidx: 2
+}
+
+.s3gon:nth-child(36),
+.s3gon:nth-child(48) {
+    --cidx: 12
+}
+
+.s3gon:nth-child(n + 37):nth-child(-n + 49) {
+    --ridx: 7
+}
+
+.s3gon:nth-child(37) {
+    --cidx: 1
+}
+
+.s3gon:nth-child(49) {
+    --cidx: 13
+}
+
+.s3gon:nth-child(n + 2):nth-child(-n + 4),
+.s3gon:nth-child(n + 10):nth-child(-n + 16),
+.s3gon:nth-child(n + 26):nth-child(-n + 36) {
+    --p0: -1
+}
+
+
+.grid {
+    display: grid;
+    padding: 0.93819vmin 2.12778vmin;
+  }
+  
+  .s3gon {
+    --m: calc(.5*(1 - var(--p0, 1)*var(--p1, 1)));
+    --p: calc(2*var(--m) - 1);
+    grid-row: var(--ridx);
+    grid-column: var(--cidx, var(--n-rows));
+    position: relative;
+    margin: calc(-0.93819vmin - (1 - var(--m))*1.87639vmin) -2.12778vmin;
+    width: 7.50555vmin;
+    height: 7.50555vmin;
+    background: currentcolor;
+    color: #000;
+    clip-path: polygon(calc(50%*(1 + 0)) calc(50%*(1 + var(--p)*-1)), calc(50%*(1 + 0.86603)) calc(50%*(1 + var(--p)*0.5)), calc(50%*(1 + -0.86603)) calc(50%*(1 + var(--p)*0.5)), calc(50%*(1 + 0)) calc(50%*(1 + var(--p)*-1)), calc(50% + (50% - 2px)*0) calc(50% + (50% - 2px)*var(--p)*-1), calc(50% + (50% - 2px)*-0.86603) calc(50% + (50% - 2px)*var(--p)*0.5), calc(50% + (50% - 2px)*0.86603) calc(50% + (50% - 2px)*var(--p)*0.5), calc(50% + (50% - 2px)*0) calc(50% + (50% - 2px)*var(--p)*-1));
+    animation: size 1s infinite alternate;
+    animation-delay: calc(var(--cidx)*-1s/var(--n-cols));
+    animation-duration: 1s, 2s;
+    animation-name: size, cinv, fill;
+    animation-timing-function: ease-in, steps(1), ease-out;
+  }
+  .s3gon:nth-child(odd) {
+    --p1: -1;
+  }
+  
+  @keyframes size {
+    95%, 100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes fill {
+    95%, 100% {
+      clip-path: polygon(calc(50%*(1 + 0)) calc(50%*(1 + var(--p)*-1)), calc(50%*(1 + 0.86603)) calc(50%*(1 + var(--p)*0.5)), calc(50%*(1 + -0.86603)) calc(50%*(1 + var(--p)*0.5)), calc(50%*(1 + 0)) calc(50%*(1 + var(--p)*-1)), calc(50% + (50% - 50%)*0) calc(50% + (50% - 50%)*var(--p)*-1), calc(50% + (50% - 50%)*-0.86603) calc(50% + (50% - 50%)*var(--p)*0.5), calc(50% + (50% - 50%)*0.86603) calc(50% + (50% - 50%)*var(--p)*0.5), calc(50% + (50% - 50%)*0) calc(50% + (50% - 50%)*var(--p)*-1));
+    }
+  }
+  @keyframes cinv {
+    50% {
+      color: #fff;
+    }
+  }
+  
