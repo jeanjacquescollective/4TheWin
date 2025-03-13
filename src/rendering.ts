@@ -46,38 +46,7 @@ export function drawLandingPage(
 
 }
 
-/**
- * Draw game instructions panel in the bottom left
- */
-export function drawInstructionsPanel(
-  canvasCtx: CanvasRenderingContext2D,
-  canvasHeight: number,
-): void {
-  // Set panel dimensions and position
-  const padding = 15;
-  const panelWidth = 420;
-  const panelHeight = 160;
-  const panelX = padding;
-  const panelY = canvasHeight - panelHeight - padding;
-  const cornerRadius = 10;
-  // Draw semi-transparent background with rounded corners
-  canvasCtx.fillStyle = "rgba(0, 0, 0, 0.6)";
-  
-  // Draw rounded rectangle (compatible with all browsers)
-  canvasCtx.beginPath();
-  canvasCtx.moveTo(panelX + cornerRadius, panelY);
-  canvasCtx.lineTo(panelX + panelWidth - cornerRadius, panelY);
-  canvasCtx.arcTo(panelX + panelWidth, panelY, panelX + panelWidth, panelY + cornerRadius, cornerRadius);
-  canvasCtx.lineTo(panelX + panelWidth, panelY + panelHeight - cornerRadius);
-  canvasCtx.arcTo(panelX + panelWidth, panelY + panelHeight, panelX + panelWidth - cornerRadius, panelY + panelHeight, cornerRadius);
-  canvasCtx.lineTo(panelX + cornerRadius, panelY + panelHeight);
-  canvasCtx.arcTo(panelX, panelY + panelHeight, panelX, panelY + panelHeight - cornerRadius, cornerRadius);
-  canvasCtx.lineTo(panelX, panelY + cornerRadius);
-  canvasCtx.arcTo(panelX, panelY, panelX + cornerRadius, panelY, cornerRadius);
-  canvasCtx.closePath();
-  canvasCtx.fill();
-  
-}
+
 
 /**
  * Draw the game board
