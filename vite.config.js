@@ -5,5 +5,5 @@ export default defineConfig({
         outDir: 'docs',
     }
     ,
-    assetsInclude: ['**/images/**']
+    assetsInclude: ['**/images/**', '**/favicon/**'],
 });

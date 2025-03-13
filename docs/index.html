@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect Four Gesture Game</title>
-    <!-- Add Google Fonts - Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Four Gesture Game</title>
+  <!-- Add Google Fonts - Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
 
 
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
 
   <script type="module" crossorigin src="./assets/index-DD2w49y-.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-CNYdEWrH.css">
 </head>
+
 <body style="margin: 0; overflow: hidden;">
   <section id="loading-screen" class="loading-screen">
     <div class="grid" style="--n-rows: 7; --n-cols: 15; --cidx: 7">
@@ -74,47 +81,49 @@
   </section>
   <header id="game-ui-header" class="game-element hidden">
     <!-- <h1>Connect Four Gesture Game</h1> -->
-     <h2 id="winner-text"></h2>
-     <p id="timer-text"></p>
+    <h2 id="winner-text"></h2>
+    <p id="timer-text"></p>
     <p id="current-player-text">Huidige speler: <span id="current-player"></span></p>
     <p id="bomb-text">✌️ Om bom te activeren</p>
   </header>
-<section id="demos">
-  <div id="liveView" class="videoView">
-    <div style="position: relative;">
-      <video id="webcam" autoplay playsinline style="transform: scaleX(-1);"></video>
-      <canvas class="output_canvas" id="output_canvas" width="1280" height="720" style="position: absolute; left: 0px; top: 0px;"></canvas>
+  <section id="demos">
+    <div id="liveView" class="videoView">
+      <div style="position: relative;">
+        <video id="webcam" autoplay playsinline style="transform: scaleX(-1);"></video>
+        <canvas class="output_canvas" id="output_canvas" width="1280" height="720"
+          style="position: absolute; left: 0px; top: 0px;"></canvas>
+      </div>
     </div>
-  </div>
-</section>
-<section class="ui-container intro-element" id="start-ui">
-  <h1>4 The Win</h1>
-  <div class="progress-bar" id="progress-bar">
-    <div class="progress" id="progress" style="width: 0%;"></div>
-  </div>
-  <p>👍 Houd je duim omhoog voor 2 seconden om te beginnen</p>
-  <p><strong>Waarschuwing:</strong> Dit spel vereist twee spelers</p>
-</section>
-<aside id="game-instructions" class="game-instructions hidden game-element">
-  <div class="instruction">
-    <img src="/assets/closed-hand-BylWpQKF.jpg" alt="Closed hand gesture">
-    <p>Sluit je hand om een steen te selecteren</p>
-  </div>
-  <div class="instruction">
-    <img src="/assets/open-hand-BltyNSIo.jpg" alt="Open hand gesture">
-    <p>Open je hand om de steen te plaatsen</p>
-  </div>
-  <div class="instruction">
-    <img src="/assets/peace-hand-BSgJ4Ouf.png" alt="Peace hand gesture">
-    <p>Maak een vredesteken om een bom te activeren</p>
-  </div>
-</aside>
-<aside id="qr-code" class="qr-code intro-element">
-  <p>Meer info over IMD</p>
-  <img src="/assets/qr-code-TwfqPAKP.png" alt="">
-</aside>
-<footer id="game-ui-footer" class="intro-element">
-  - Gemaakt door Emile Bergers en Emiel Clopterop - aangepast door Jannes Lambrecht -
-</footer>
+  </section>
+  <section class="ui-container intro-element" id="start-ui">
+    <h1>4 The Win</h1>
+    <div class="progress-bar" id="progress-bar">
+      <div class="progress" id="progress" style="width: 0%;"></div>
+    </div>
+    <p>👍 Houd je duim omhoog voor 2 seconden om te beginnen</p>
+    <p><strong>Waarschuwing:</strong> Dit spel vereist twee spelers</p>
+  </section>
+  <aside id="game-instructions" class="game-instructions hidden game-element">
+    <div class="instruction">
+      <img src="./assets/closed-hand-BylWpQKF.jpg" alt="Closed hand gesture">
+      <p>Sluit je hand om een steen te selecteren</p>
+    </div>
+    <div class="instruction">
+      <img src="./assets/open-hand-BltyNSIo.jpg" alt="Open hand gesture">
+      <p>Open je hand om de steen te plaatsen</p>
+    </div>
+    <div class="instruction">
+      <img src="./assets/peace-hand-BSgJ4Ouf.png" alt="Peace hand gesture">
+      <p>Maak een vredesteken om een bom te activeren</p>
+    </div>
+  </aside>
+  <aside id="qr-code" class="qr-code intro-element">
+    <p>Meer info over IMD</p>
+    <img src="./assets/qr-code-TwfqPAKP.png" alt="">
+  </aside>
+  <footer id="game-ui-footer" class="intro-element">
+    - Gemaakt door Emile Bergers en Emiel Clopterop - aangepast door Jannes Lambrecht -
+  </footer>
 </body>
+
 </html>
