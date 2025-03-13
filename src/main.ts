@@ -72,7 +72,6 @@ import {
   drawPreviewDisc,
   drawAnimatingDisc,
   drawGameStatus,
-  drawInstructionsPanel
 } from './rendering';
 import { gameElements, introElements } from './uiElements';
 
@@ -323,11 +322,6 @@ function handleGameState(results: any, deltaTime: number) {
     );
   }
   
-  // Draw instructions panel in the bottom left
-  drawInstructionsPanel(
-    canvasCtx!,
-    dimensions.canvasHeight,
-  );
   
   // Remove the click to reset logic - we now use a timer
   canvasElement.onclick = null;
