@@ -23,17 +23,13 @@ html, body {
 }
 
 h1 {
-  color: #FFFFFF; /* White text */
   margin: 10px;
-  font-family: 'Montserrat', sans-serif;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for outline effect */
 }
 
 h2 {
   clear: both;
   margin: 10px;
-  font-family: 'Montserrat', sans-serif;
-  color: #FFFFFF; /* White text */
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add text shadow for outline effect */
 }
 
@@ -135,7 +131,7 @@ section {
   font-size: calc(8px + 1.2vw);
   z-index: 3;
   display: block;
-  font-family: 'Montserrat', sans-serif;
+
 }
 
 #webcamButton {
@@ -151,7 +147,7 @@ section {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+
 }
 
 #gesture_output {
@@ -163,7 +159,7 @@ section {
   color: white;
   border-radius: 5px;
   z-index: 3;
-  font-family: 'Montserrat', sans-serif;
+
 }
 
 .ui-container{
@@ -211,7 +207,7 @@ aside {
   padding: 10px;
   border-radius: 5px;
   z-index: 3;
-  font-family: 'Montserrat', sans-serif;
+
 }
 
 aside p {
@@ -230,7 +226,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
+
   z-index: 3;
 }
 
@@ -241,7 +237,7 @@ header {
   color: white;
   text-align: center;
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
+
   z-index: 3;
 }
 
@@ -255,7 +251,7 @@ header {
   left: 20px;
   color: white;
   z-index: 3;
-  font-family: 'Montserrat', sans-serif;
+
   gap: 1rem;
 }
 
