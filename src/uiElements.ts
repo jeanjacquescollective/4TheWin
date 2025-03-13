@@ -10,3 +10,5 @@ export const winnerText = document.getElementById('winner-text') as HTMLHeadingE
 export const timerText = document.getElementById('timer-text') as HTMLParagraphElement;
 export const gameElements = document.querySelectorAll('.game-element') as NodeListOf<HTMLElement>;
 export const introElements = document.querySelectorAll('.intro-element') as NodeListOf<HTMLElement>;
+export const endGameText = document.getElementById('end-game-text') as HTMLButtonElement;
+export const currentPlayerTextElement = document.querySelector('.current-player-text') as HTMLParagraphElement;

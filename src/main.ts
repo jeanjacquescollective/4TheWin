@@ -73,7 +73,7 @@ import {
   drawAnimatingDisc,
   drawGameStatus,
 } from './rendering';
-import { gameElements, introElements } from './uiElements';
+import { currentPlayerTextElement, endGameText, gameElements, introElements } from './uiElements';
 
 // DOM Elements
 const video = document.getElementById("webcam") as HTMLVideoElement;
@@ -195,6 +195,7 @@ function handleLandingState(results: any, deltaTime: number) {
 }
 
 function showIntroUI() {
+  endGameText.classList.add('hidden');
   introElements.forEach(element => {
     element.classList.remove('hidden');
   });
@@ -208,6 +209,7 @@ function hideIntroUI() {
 }
 
 function showGameUI() {
+  currentPlayerTextElement.classList.remove('hidden');
   gameElements.forEach(element => {
     element.classList.remove('hidden');
   });

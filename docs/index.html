@@ -20,7 +20,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
   <link rel="manifest" href="./favicon/site.webmanifest">
 
-  <script type="module" crossorigin src="./assets/index-CuS5FdEH.js"></script>
+  <script type="module" crossorigin src="./assets/index-CkvB5OcR.js"></script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -78,12 +78,18 @@
     </div>
     <p>Loading</p>
   </section>
-  <header id="game-ui-header" class="game-element hidden">
+  <header id="game-ui-header" class="game-ui-header game-element hidden">
     <!-- <h1>Connect Four Gesture Game</h1> -->
-    <h2 id="winner-text"></h2>
-    <p id="timer-text"></p>
-    <p id="current-player-text">Huidige speler: <span id="current-player"></span></p>
-    <p id="bomb-text">✌️ Om bom te activeren</p>
+
+    <div class="end-game-text hidden" id="end-game-text">
+      <h2 id="winner-text"></h2>
+      <p id="timer-text"></p>
+    </div>
+    <div class="current-player-text" id="current-player-text">
+      <p id="current-player-text">Huidige speler: <span id="current-player"></span></p>
+      <p id="bomb-text">✌️ Om bom te activeren</p>
+    </div>
+
   </header>
   <section id="demos">
     <div id="liveView" class="videoView">

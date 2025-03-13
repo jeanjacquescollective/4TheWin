@@ -21,7 +21,7 @@ import {
   bombImage
 } from './gameState';
 import { arteLogoImage } from './setup';
-import { bombText, currentPlayerElement, currentPlayerText, timerText, winnerText } from './uiElements';
+import { bombText, currentPlayerElement, currentPlayerText, currentPlayerTextElement, endGameText, timerText, winnerText } from './uiElements';
 
 /**
  * Check if a position is part of the winning positions
@@ -385,6 +385,8 @@ export function drawGameStatus(
   canvasCtx.textAlign = "center";
   
   if (gameOver) {
+    endGameText.classList.remove("hidden");
+    currentPlayerTextElement.classList.add("hidden");
     currentPlayerText.classList.add("hidden");
     bombText.classList.add("hidden");
     // The winner is the opposite of the current player since we already switched
