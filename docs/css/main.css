@@ -195,20 +195,7 @@ section {
 }
 
 
-.qr-code {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: white;
-  padding: 1rem;
-  border-radius: 5px;
-  z-index: 3;
 
-}
 
 .qr-code p {
   margin: 0;
@@ -241,20 +228,36 @@ header {
   z-index: 3;
 }
 
-.game-instructions {
+aside{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
+  bottom: 1.25rem;
+  z-index: 3;
+  gap: 1rem;
+
+
+
+}
+
+.qr-code {
+
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+
+}
+
+.game-instructions {
+
   align-items: start;
   justify-content: start;
   position: fixed;
-  bottom: 20px;
   left: 20px;
-  color: white;
-  z-index: 3;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  gap: 1rem;
-  padding: 1rem;
+  
 }
 
 .game-instructions .instruction {
@@ -274,10 +277,6 @@ header {
   width: 50px;
   height: auto;
   border-radius: 50%;
-}
-
-.qr-code p{
-  margin-bottom: 1rem;
 }
 
 
