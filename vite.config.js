@@ -4,4 +4,6 @@ export default defineConfig({
     build: {
         outDir: 'docs',
     }
+    ,
+    assetsInclude: ['**/images/**']
 });
