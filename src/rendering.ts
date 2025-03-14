@@ -387,17 +387,16 @@ export function drawGameStatus(
   if (gameOver) {
     endGameText.classList.remove("hidden");
     currentPlayerTextElement.classList.add("hidden");
-    currentPlayerText.classList.add("hidden");
-    bombText.classList.add("hidden");
     // The winner is the opposite of the current player since we already switched
     const winner = currentPlayer === 1 ? 2 : 1;
     winnerText.textContent = `Speler ${winner === 1 ? "Oranje" : "Blauw"} wint!`;
+    canvasCtx.fillStyle = winner === 1 ? "rgba(255, 165, 0, 0.2)" : "rgba(0, 0, 255, 0.2)";
     timerText.textContent = timeLeft ? `Terug naar startscherm in ${timeLeft}s` : '';
   } else {
     // Current player display with white text and black outline
     currentPlayerElement.textContent = `${currentPlayer === 1 ? "Oranje" : "Blauw"}`;
 
-    
+    currentPlayerText.style.backgroundColor = currentPlayer === 1 ? "#ef7d00" : "#009ad4";
     // Show bomb toggle hint if player has bombs available
     if (playerBombs[currentPlayer as keyof typeof playerBombs] > 0) {
       bombText.textContent = bombSelected ? "Bom actief! ✌️ om terug te wisselen" : "✌️ om bom te activeren";

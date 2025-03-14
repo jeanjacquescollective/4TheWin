@@ -21,7 +21,7 @@ export let progressBarWidth: number = 0;
 export let gameOver: boolean = false;
 export let winningPositions: WinningPosition[] | null = null;
 export let winTimer: number = 0;
-export const winTimerDuration: number = 15000; // 15 seconds in milliseconds
+export const winTimerDuration: number = 10000; // 15 seconds in milliseconds
 
 // Bomb tracking
 export let playerBombs: { [key in Player]: number } = { 1: 1, 2: 1 }; // Each player starts with 1 bomb

@@ -13,7 +13,7 @@ let lastVideoTime = -1;
 let lastTimestamp = 0;
 let lastResults: { timestamp: number; } | undefined = undefined; // Store last valid results
 let lastPeaceSignTime = 0; // Timestamp of last peace sign to prevent repeated toggling
-
+let lastGesture = ""; // Store last gesture to prevent repeated peace sign toggling
 /**
  * Initialize the gesture recognizer
  */
@@ -248,11 +248,13 @@ export function processHandGestures(
       } else if (gestureName === "Victory" || gestureName === "Peace") {
         // Handle peace sign for bomb toggle, with debounce to prevent multiple toggles
         const now = Date.now();
-        if (now - lastPeaceSignTime > 1000) { // 1 second debounce
+        if (now - lastPeaceSignTime > 1000 && lastGesture !== "Victory" && lastGesture !== "Peace") { // 1 second debounce and require different gesture
           onPeaceSign();
           lastPeaceSignTime = now;
         }
       }
+      // Update lastGesture to the current gesture
+      lastGesture = gestureName;
     }
 
     if (activeDisc.isGrabbed) {
